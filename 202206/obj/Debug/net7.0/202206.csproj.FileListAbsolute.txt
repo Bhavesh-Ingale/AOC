@@ -1,0 +1,15 @@
+C:\Users\b.ingale\source\repos\AOC\202206\bin\Debug\net7.0\202206.exe
+C:\Users\b.ingale\source\repos\AOC\202206\bin\Debug\net7.0\202206.deps.json
+C:\Users\b.ingale\source\repos\AOC\202206\bin\Debug\net7.0\202206.runtimeconfig.json
+C:\Users\b.ingale\source\repos\AOC\202206\bin\Debug\net7.0\202206.dll
+C:\Users\b.ingale\source\repos\AOC\202206\bin\Debug\net7.0\202206.pdb
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.csproj.AssemblyReference.cache
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.AssemblyInfoInputs.cache
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.AssemblyInfo.cs
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.csproj.CoreCompileInputs.cache
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.dll
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\refint\202206.dll
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.pdb
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\202206.genruntimeconfig.cache
+C:\Users\b.ingale\source\repos\AOC\202206\obj\Debug\net7.0\ref\202206.dll
