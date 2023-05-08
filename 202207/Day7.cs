@@ -47,7 +47,7 @@ public class Day7
             {
 
                 // check if line has digits in the first half, if yes then store the later part as the name of the file
-                if (line.Split(" ")[0].All(c => char.IsDigit(c)))
+                if (line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0].All(c => char.IsDigit(c)))
                 {
 
                 }
