@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\b.ingale\\.nuget\\packages\\": {},
+    "C:\\Users\\Bhavesh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\b.ingale\\source\\repos\\AOC\\202203\\202203.csproj",
+      "projectUniqueName": "D:\\AOC\\AOC\\202203\\202203.csproj",
       "projectName": "202203",
-      "projectPath": "C:\\Users\\b.ingale\\source\\repos\\AOC\\202203\\202203.csproj",
-      "packagesPath": "C:\\Users\\b.ingale\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\b.ingale\\source\\repos\\AOC\\202203\\obj\\",
+      "projectPath": "D:\\AOC\\AOC\\202203\\202203.csproj",
+      "packagesPath": "C:\\Users\\Bhavesh\\.nuget\\packages\\",
+      "outputPath": "D:\\AOC\\AOC\\202203\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\b.ingale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bhavesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
