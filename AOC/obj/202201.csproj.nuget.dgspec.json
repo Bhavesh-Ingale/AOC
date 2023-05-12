@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\AOC\\AOC\\AOC\\202201.csproj",
         "projectName": "202201",
         "projectPath": "D:\\AOC\\AOC\\AOC\\202201.csproj",
-        "packagesPath": "C:\\Users\\Bhavesh\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\b.ingale\\.nuget\\packages\\",
         "outputPath": "D:\\AOC\\AOC\\AOC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bhavesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\b.ingale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

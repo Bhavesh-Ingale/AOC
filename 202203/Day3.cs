@@ -10,7 +10,7 @@ public class Day3
         string[] lines = File.ReadAllLines("C:\\Users\\b.ingale\\Desktop\\Input Day3.txt");
 
         //var sum_priorities = new List<int>();
-        var sum_priorities = 0;
+        var sum_priorities = 0
 
         var rucksack = new Dictionary<int, int>();
         var counter = 0;

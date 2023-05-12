@@ -8,7 +8,7 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Bhavesh\\.nuget\\packages\\": {},
+    "C:\\Users\\b.ingale\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -17,14 +17,14 @@
       "projectUniqueName": "D:\\AOC\\AOC\\202203\\202203.csproj",
       "projectName": "202203",
       "projectPath": "D:\\AOC\\AOC\\202203\\202203.csproj",
-      "packagesPath": "C:\\Users\\Bhavesh\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\b.ingale\\.nuget\\packages\\",
       "outputPath": "D:\\AOC\\AOC\\202203\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bhavesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\b.ingale\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

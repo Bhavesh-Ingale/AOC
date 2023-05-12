@@ -1,17 +1,11 @@
-﻿//not final, answers do not tally
-
-using System;
+﻿using System;
 using System.Xml.XPath;
 
-public class Day7
+internal class Day7
 {
-	public static void day7_P1()
-	{
-        Console.WriteLine("Part 1");
-
-        //string[] lines = File.ReadAllLines("C:\\Users\\b.ingale\\Desktop\\Input Day7.txt");
-        string[] lines = File.ReadAllLines("C:\\Users\\Bhavesh\\Desktop\\Input Day7.txt");
-
+    // Returns Dict with path and the utilized bytes
+    public static Dictionary<string, double> storage_per_path(string[] lines)
+    {
         var pathing = new Dictionary<string, double>();
 
         string current_path = "/home";
@@ -27,8 +21,11 @@ public class Day7
 
                 string command = line;
                 // maybe nothing to do after checking for ls
-                if (line.Substring(2, 2) == "ls") ;
-                if (line.Substring(2,2)=="cd")
+                if (line.Substring(2, 2) == "ls")
+                {
+                    continue;
+                }
+                if (line.Substring(2, 2) == "cd")
                 {
                     // taking user home
                     if (line[5..] == "/")
@@ -57,40 +54,80 @@ public class Day7
                 // if yes then store the later part as the name of the file
                 if (line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0].All(c => char.IsDigit(c)))
                 {
-                    Console.WriteLine("file: "+line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[1]+ $" in {current_path}");
+                    //Console.WriteLine("file: "+line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[1]+ $" in {current_path}");
                     pathing[current_path] += double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0]);
-                    Console.WriteLine($"path {current_path} has {pathing[current_path]} bytes");
-                    Console.WriteLine($"Added {double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0])} to {current_path}");
-                    foreach (var key in pathing.Keys)
+                    //Console.WriteLine($"path {current_path} has {pathing[current_path]} bytes");
+                    //Console.WriteLine($"Added {double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0])} to {current_path}");
+                    foreach (var path in pathing.Keys)
                     {
-                        if (key.Contains(current_path[..current_path.LastIndexOf("/")]) && key!=current_path)
+                        if (current_path[..current_path.LastIndexOf("/")].Contains(path) && path != current_path)
                         {
-                            pathing[key] += double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0]);
-                            Console.WriteLine($"Added {double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0])} to {key}");
+                            pathing[path] += double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0]);
+                            //Console.WriteLine($"Added {double.Parse(line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0])} to {path}");
                         }
-                        //Console.WriteLine($"{key}: {pathing[key]}");
                     }
                 }
                 // else the first half will be a directory
                 // followed by the name of the folder
                 else
                 {
-                    Console.WriteLine("dir: "+line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[1]+$" in {current_path}");
+                    //Console.WriteLine("dir: " + line.Split(" ", StringSplitOptions.RemoveEmptyEntries)[1] + $" in {current_path}");
                     //Console.WriteLine(pathing[current_path]);
                 }
 
             }
         }
-        Console.WriteLine("Printing all");
+        return pathing;
+    }
+
+	public static void day7_P1()
+	{
+        Console.WriteLine("\n"+new String('-', 5)+"Part 1"+ new String('-', 5));
+
+        string[] lines = File.ReadAllLines("C:\\Users\\b.ingale\\Desktop\\Input Day7.txt");
+        //string[] lines = File.ReadAllLines("C:\\Users\\Bhavesh\\Desktop\\Input Day7.txt");
+
+        var pathing = storage_per_path(lines);
+        Console.WriteLine("Printing all dir whose size is less than 100000");
         // to display all the files and folders if needed to check
+        double sum = 0;
         foreach (var key in pathing.Keys)
         {
-            Console.WriteLine($"{key}: {pathing[key]}");
+            if (pathing[key]<100000)
+            {
+                Console.WriteLine($"{key}: {pathing[key]}");
+                sum += pathing[key];
+            }
+            
         }
+        Console.WriteLine($"sum of the total sizes of those directories: {sum} bytes");
 
     }
     public static void day7_P2()
     {
-        Console.WriteLine("Part 2");
+        Console.WriteLine("\n" + new String('-', 5) + "Part 2" + new String('-', 5));
+
+        string[] lines = File.ReadAllLines("C:\\Users\\b.ingale\\Desktop\\Input Day7.txt");
+
+        var pathing = storage_per_path(lines);
+
+        const double total_disk_space = 70000000;
+        const double min_space_required = 30000000;
+
+        var used_space = pathing["/home"];
+        var space_available = total_disk_space - used_space;
+
+        var space_to_clear = used_space - min_space_required;
+
+        var sortedDict = from entry in pathing
+                         where total_disk_space - used_space + entry.Value >= min_space_required
+                         orderby entry.Value ascending 
+                         select entry;
+        Console.WriteLine("First Dir with amount of space min to delete, to free up space");
+        foreach (var key in sortedDict)
+        {
+            Console.WriteLine($"{key}");
+            break;
+        }
     }
 }
